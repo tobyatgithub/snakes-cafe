@@ -1,3 +1,5 @@
+import sys
+
 WIDTH = 96
 ORDER = {}
 
@@ -62,9 +64,7 @@ def order():
     print("*" * WIDTH)
     return(input())
 
-# def feedback(user_order, ORDER):
-
-if __name__ == '__main__':
+def run():
     welcome()
     menu()
 
@@ -94,3 +94,14 @@ if __name__ == '__main__':
     for i,j in ORDER.items():
         print("%s : %d" %(i,j))
     print("\n\nYour Order is received and on its way!\n")
+
+
+# def feedback(user_order, ORDER):
+
+if __name__ == '__main__':
+    try:
+        run()
+    except KeyboardInterrupt:
+        print("\n\nQuit!.. See you!\n\n")
+        sys.exit()
+
